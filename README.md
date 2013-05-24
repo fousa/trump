@@ -8,6 +8,8 @@ Below is an example of the output in the Gemfile:
     # [gemname](http://gemurl.com)
     gem "gemname", "0.0.1"
 
+Credits for this gem go to [@junkiesxl](http://twitter.com/junkiesxl), he created an emacs function to do this. But I use Vim so... I created a gem for it!
+
 ## Installation
 
 Install the gem:
