@@ -1,6 +1,6 @@
 # Trump
 
-Add a gem to the Gemfile with more info in comments.
+Add a gem to the Gemfile with more info in comments. This will not add it directly met add it to your clipboard, so you can easily past it where you want inside your Gemfile.
 
 Below is an example of the output in the Gemfile:
 
@@ -25,18 +25,14 @@ There is only one command and this is explained below.
 Run the following command followed by the name of the gem.
 
     trump gemname
-    trump add gemname
 
 Both commands are the same.
 
-Now check out your Gemfile and look at the info added to the gem.
+Now open your Gemfile and paste the content of you clipboard. It's that simple!
 
 ## TODO
 
-- Edit an existing gem
-- Choose the version number
-- Remove a gem
-- Add a gem in the development group
+- Choose the git version
 
 ## Contributing
 

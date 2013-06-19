@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'thor', '0.18.1'
   spec.add_dependency "json_pure", "~> 1.8.0"
   spec.add_dependency "curl_wrapper", "~> 0.0.3"
+  spec.add_dependency "clipboard", "~> 1.0.5"
 end

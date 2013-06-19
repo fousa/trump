@@ -1,4 +1,5 @@
 require "curl_wrapper"
+require "clipboard"
 require "json/pure"
 
 module Trump
@@ -26,18 +27,15 @@ module Trump
         your_gem = JSON.parse(content)
         url = your_gem["homepage_uri"] || your_gem["documentation_uri"]
 
-        puts_text("Detecting Gemfile")
-        if File.exists?("Gemfile")
-          File.open("Gemfile", 'a') do |file|
-            file.puts ""
-            file.puts "# #{your_gem["info"][0..75]}"
-            file.puts "# [#{name}](#{url})"
-            file.puts "gem \"#{name}\", \"#{your_gem["version"]}\""
-          end
-          puts_text("Adding gem '#{name}' to the Gemfile.")
-        else
-          puts_text("There is no Gemfile available in this directory.")
-        end
+
+        text = "# #{your_gem["info"][0..75]}\n"
+        text += "# [#{name}](#{url})\n"
+        text += "gem \"#{name}\", \"~> #{your_gem["version"]}\""
+        Clipboard.copy text
+
+        puts_text("Copied gem '#{name}' data to your clipboard.")
+        puts_text("")
+        puts_text("Now open the Gemfile and paste along!")
         puts_text("")
         puts end_text
       end
