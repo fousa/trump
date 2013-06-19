@@ -12,8 +12,4 @@ class TrumpCommand < Thor
   end
 end
 
-if ARGV[0] == "add"
-  TrumpCommand.start
-else
-  TrumpCommand.new.add(ARGV[0])
-end
+TrumpCommand.new.add(ARGV[0])
